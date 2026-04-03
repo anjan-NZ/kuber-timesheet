@@ -1,0 +1,52 @@
+# Frontend
+frontend/node_modules/
+frontend/.next/
+frontend/out/
+frontend/build/
+frontend/.env.local
+frontend/.env.local.backup
+frontend/.env.*.local
+
+# Python
+services/**/.venv/
+services/**/venv/
+services/**/__pycache__/
+services/**/*.pyc
+services/**/*.pyo
+services/**/.pytest_cache/
+services/**/.coverage
+services/**/*.egg-info/
+services/**/dist/
+services/**/build/
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# OS
+Thumbs.db
+.env
+
+# Secrets
+.env.*.secret
+*.key
+*.pem
+
+# Logs
+*.log
+logs/
+
+# Misc
+.vercel/
+.turbo/
+dist/
+build/
+
+# Environment specifics
+.local
+.env.production.local
+.env.development.local

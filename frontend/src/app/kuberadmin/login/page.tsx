@@ -21,19 +21,26 @@ export default function AdminLogin() {
       const adminEmail = process.env.NEXT_PUBLIC_ADMIN_EMAIL || 'admin@company.com';
       const adminPassword = process.env.NEXT_PUBLIC_ADMIN_PASSWORD || 'admin123';
 
+      console.log('Admin login attempt:');
+      console.log('Expected email:', adminEmail);
+      console.log('Entered email:', email);
+      console.log('Password match:', password === adminPassword);
+
       if (email === adminEmail && password === adminPassword) {
         // Store admin session (in real app, use secure sessions)
         localStorage.setItem('adminToken', JSON.stringify({ 
           email, 
           loginTime: new Date().toISOString() 
         }));
+        console.log('Login successful, redirecting to dashboard');
         router.push('/kuberadmin/dashboard');
       } else {
+        console.log('Login failed - invalid credentials');
         setError('Invalid admin credentials');
       }
     } catch (err) {
       setError('Login failed. Please try again.');
-      console.error(err);
+      console.error('Login error:', err);
     } finally {
       setLoading(false);
     }

@@ -17,9 +17,9 @@ export default function AdminLogin() {
     setLoading(true);
 
     try {
-      // Check against environment admin credentials
-      const adminEmail = process.env.NEXT_PUBLIC_ADMIN_EMAIL;
-      const adminPassword = process.env.NEXT_PUBLIC_ADMIN_PASSWORD;
+      // Check against environment admin credentials (with defaults for testing)
+      const adminEmail = process.env.NEXT_PUBLIC_ADMIN_EMAIL || 'admin@company.com';
+      const adminPassword = process.env.NEXT_PUBLIC_ADMIN_PASSWORD || 'admin123';
 
       if (email === adminEmail && password === adminPassword) {
         // Store admin session (in real app, use secure sessions)
@@ -78,7 +78,10 @@ export default function AdminLogin() {
         </form>
 
         <div className={styles.info}>
-          <p>📝 Note: Use credentials from environment variables</p>
+          <p>📝 Test Credentials:</p>
+          <p><strong>Email:</strong> admin@company.com</p>
+          <p><strong>Password:</strong> admin123</p>
+          <p style={{marginTop: '10px', fontSize: '12px'}}>Change these in Vercel Environment Variables for production</p>
         </div>
       </div>
     </div>

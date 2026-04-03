@@ -188,7 +188,7 @@ export default function EmployeeDashboard() {
 
       {todayRecords.length > 0 && (
         <div className={styles.recordsSection}>
-          <h2>📋 Today\'s Records</h2>
+          <h2>📋 Today&apos;s Records</h2>
           <div className={styles.recordsList}>
             {todayRecords.map((record, idx) => (
               <div key={idx} className={styles.record}>

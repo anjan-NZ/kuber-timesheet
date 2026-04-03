@@ -1,4 +1,4 @@
-import { redirect } from 'next/navigation';
+import { redirect } from 'next/redirect';
 
 export default function AdminRoot() {
   // Redirect to login page directly

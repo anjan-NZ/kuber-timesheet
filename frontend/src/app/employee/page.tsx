@@ -1,4 +1,4 @@
-import { redirect } from 'next/navigation';
+import { redirect } from 'next/redirect';
 
 export default function EmployeeRoot() {
   // Redirect to employee login

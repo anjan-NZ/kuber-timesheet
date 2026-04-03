@@ -27,7 +27,7 @@ export default function Home() {
         gap: '20px',
         maxWidth: '800px'
       }}>
-        <Link href="/login">
+        <Link href="/employee/login">
           <div style={{
             background: 'rgba(255, 255, 255, 0.1)',
             padding: '30px',
